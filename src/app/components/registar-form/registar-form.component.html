@@ -1,0 +1,14 @@
+<mat-card class="register-card">
+  Simple Card
+  <form>
+    <mat-form-field class="full-form-field" appearance="standard">
+      <input
+        matInput
+        placeholder="Nome entidade"
+        [(ngModel)]="entidade"
+        name="entidade"
+      />
+    </mat-form-field>
+  </form>
+  {{ entidade }}
+</mat-card>
