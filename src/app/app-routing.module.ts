@@ -6,7 +6,8 @@ import { RegistosComponent } from './components/registos/registos.component';
 
 const routes: Routes = [
   { path: 'registar', component: RegistarFormComponent },
-  { path: '', component: RegistosComponent, pathMatch: 'full' }
+  { path: '/registos', component: RegistosComponent },
+  { path: '', redirectTo: '/registos', pathMatch: 'full' }
 ];
 
 @NgModule({
