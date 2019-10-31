@@ -1,0 +1,16 @@
+li {
+  list-style: none;
+}
+
+.registo-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.registo-list li {
+  min-width: 350px;
+}
+
+.registo-card {
+  margin: 20px;
+}

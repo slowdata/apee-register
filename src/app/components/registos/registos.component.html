@@ -1,0 +1,24 @@
+<div class="container">
+  <ul class="registo-list" *ngIf="registos.length > 0; else noList">
+    <li *ngFor="let r of registos">
+      <mat-card class="registo-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{ r.entidade }}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            {{ r.tipo }}
+          </p>
+          <p>
+            {{ r.valor }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </ul>
+  <ng-template #noList>
+    <h2 #noList>Nada para mostrar</h2>
+  </ng-template>
+</div>

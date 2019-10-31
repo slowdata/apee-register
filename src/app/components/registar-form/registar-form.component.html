@@ -2,13 +2,24 @@
   Simple Card
   <form>
     <mat-form-field class="full-form-field" appearance="standard">
-      <input
-        matInput
-        placeholder="Nome entidade"
-        [(ngModel)]="entidade"
-        name="entidade"
-      />
+      <input matInput placeholder="Nome entidade" name="entidade" #entidade />
     </mat-form-field>
+    <mat-form-field class="full-form-field" appearance="standard">
+      <input matInput placeholder="Tipo documento" name="tipo" #tipo />
+    </mat-form-field>
+    <mat-form-field class="full-form-field" appearance="standard">
+      <input type="number" matInput placeholder="Valor €" name="valor" #valor />
+    </mat-form-field>
+
+    <div class="btn-right">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="foobar(entidade, tipo, valor)"
+      >
+        Inserir
+      </button>
+    </div>
   </form>
-  {{ entidade }}
+  {{ entidade.value }}
 </mat-card>
